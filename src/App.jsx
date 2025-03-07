@@ -1,22 +1,38 @@
-import { useState } from 'react'
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div  className='bg-[#014556] min-h-screen w-full mx-auto text-center'>
-      <h1 className='text-red-500 text-3xl'>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    <div className='bg-[#014556] min-h-screen text-center'>
+      <div className="bg-red-500 grid grid-cols-1 space-y-96 w-[380px] h-screen p-20 mx-auto">
+        {/* Top part */}
+        <div>
+          {/* Logo */}
+          <div>
+
+          </div>
+          {/* Text */}
+          <div>
+            <h1>Welcome to Abouv</h1>
+            <p>Assesments that get you hired</p>
+          </div>
+          {/* 3 Logos */}
+          <div>
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+        </div>
+        {/* Bottom Part */}
+        <div>
+          <h1>Login or Signup</h1>
+          {/* Input fields */}
+          <div>
+            <input type="number" name="" id="" />
+            <button>Continue</button>
+          </div>
+          {/* Terms & Conditions */}
+          <p><span className="text-base">By continuing, you agree to our</span></p>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
