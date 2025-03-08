@@ -1,8 +1,11 @@
+import StarBackGround from "./StarBackground/StarBackGround"
+
 function App() {
 
   return (
     <div className='bg-[#014556] min-h-screen text-center'>
-      <div className="bg-red-500 grid grid-cols-1 space-y-96 w-[380px] h-screen p-20 mx-auto">
+      <div className="bg-red-500 grid grid-cols-1 text-center space-y-96 w-[380px] h-screen main-div mx-auto">
+        <StarBackGround/>
         {/* Top part */}
         <div>
           {/* Logo */}
@@ -10,9 +13,9 @@ function App() {
 
           </div>
           {/* Text */}
-          <div>
-            <h1>Welcome to Abouv</h1>
-            <p>Assesments that get you hired</p>
+          <div className="space-y-2">
+            <h1 className="text-white font-bold text-2xl">Welcome to Abouv</h1>
+            <p className="text-white text-base font-normal">Assesments that get you hired</p>
           </div>
           {/* 3 Logos */}
           <div>
@@ -22,12 +25,12 @@ function App() {
           </div>
         </div>
         {/* Bottom Part */}
-        <div>
+        <div className="">
           <h1>Login or Signup</h1>
           {/* Input fields */}
-          <div>
-            <input type="number" name="" id="" />
-            <button>Continue</button>
+          <div className="grid grid-cols-1 justify-center items-center">
+            <input type="number" name="" id="" className=" w-1/2 mx-auto"/>
+            <button className="bg-[#022730] text-white font-bold w-1/2 mx-auto">Continue</button>
           </div>
           {/* Terms & Conditions */}
           <p><span className="text-base">By continuing, you agree to our</span></p>
