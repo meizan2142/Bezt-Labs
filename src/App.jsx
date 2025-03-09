@@ -10,7 +10,14 @@ function App() {
         {/* Top part */}
         <div className="relative z-10">
           {/* Logo */}
-          <div></div>
+          <div className="grid items-center justify-center">
+            <div className="w-24 h-24 rounded-full border grid items-center justify-center bg-black relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1/3 bg-[#006680]" />
+              <div className="absolute top-1/3 left-0 w-full h-1/3 bg-[#298F96]" />
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-[#298F96]" />
+              <div className="w-16 h-16 rounded-full border bg-white relative z-10" />
+            </div>
+          </div>
           {/* Text */}
           <div className="space-y-2">
             <h1 className="text-white font-bold text-2xl">Welcome to Abouv</h1>
