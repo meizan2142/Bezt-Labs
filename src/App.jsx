@@ -1,3 +1,4 @@
+import { FaAngleUp } from "react-icons/fa6";
 import StarBackGround from "./StarBackground/StarBackGround";
 
 function App() {
@@ -11,11 +12,13 @@ function App() {
         <div className="relative z-10">
           {/* Logo */}
           <div className="grid items-center justify-center">
-            <div className="w-24 h-24 rounded-full border grid items-center justify-center bg-black relative overflow-hidden">
+            <div className="w-20 h-20 rounded-full border outline-none grid items-center justify-center bg-black relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1/3 bg-[#006680]" />
               <div className="absolute top-1/3 left-0 w-full h-1/3 bg-[#298F96]" />
-              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-[#298F96]" />
-              <div className="w-16 h-16 rounded-full border bg-white relative z-10" />
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-[#37C8AB]" />
+              <div className="w-12 h-12 rounded-full border outline-none grid items-center justify-center bg-white relative z-10">
+              <FaAngleUp size={29} className="text-black"/>
+              </div>
             </div>
           </div>
           {/* Text */}
