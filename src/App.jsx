@@ -1,7 +1,13 @@
 import { FaAngleUp } from "react-icons/fa6";
 import StarBackGround from "./StarBackground/StarBackGround";
+import { useForm } from "react-hook-form";
 
 function App() {
+  const { register, handleSubmit, formState: { errors } } = useForm()
+
+  const onSubmit = (data) => {
+    console.log(data);
+  }
   return (
     <div className="bg-[#014556] min-h-screen flex justify-center items-center text-center">
       <div className="relative w-[380px] h-screen flex flex-col justify-between items-center py-10 px-6">
@@ -37,21 +43,30 @@ function App() {
           <h2 className="text-white font-semibold text-lg">Login or Signup</h2>
 
           {/* Input & Button */}
-          <div className="space-y-3">
-            <input
-              type="number"
-              className="w-full p-3 bg-white rounded-md outline-none"
-              placeholder="10 digit mobile number"
-              onInput={(e) => {
-                if (e.target.value.length > 10) {
-                  e.target.value = e.target.value.slice(0, 10);
-                }
-              }}
-            />
+          <div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="mb-4">
+                <input
+                  type="number"
+                  className="w-full p-3 bg-white rounded-md outline-none"
+                  placeholder="10 digit mobile number"
+                  id="number"
+                  {...register('number', { 'required': true, minLength: 10 })}
+                  onInput={(e) => {
+                    if (e.target.value.length > 10) {
+                      e.target.value = e.target.value.slice(0, 10);
+                    }
+                  }}
+                />
+                {errors.number?.type === 'required' && (
+                  <p className='text-red-400'>Phone number is required</p>
+                )}
+              </div>
 
-            <button className="w-full bg-[#022730] text-white font-bold p-3 rounded-md">
-              Continue
-            </button>
+              <button className="w-full bg-[#022730] text-white font-bold p-3 rounded-md">
+                Continue
+              </button>
+            </form>
           </div>
 
           {/* Terms & Conditions */}
