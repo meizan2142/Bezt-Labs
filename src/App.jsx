@@ -53,11 +53,11 @@ function App() {
                   id="number"
                   {...register('number', {
                     required: 'Phone number is required',
-                    minLength: { value: 10, message: 'Phone number must be exactly 10 digits' },
-                    maxLength: { value: 10, message: 'Phone number must be exactly 10 digits' }
+                    minLength: { value: 10, message: 'Please enter a valid 10-digit phone number' },
+                    maxLength: { value: 10, message: 'Please enter a valid 10-digit phone number' }
                   })}
                 />
-                {errors.number && <p className="text-red-400">{errors.number.message}</p>}
+                {errors.number && <p className="text-red-400 text-[14px]">{errors.number.message}</p>}
               </div>
 
               <button className="w-full bg-[#022730] text-white font-bold p-3 rounded-md">
