@@ -49,18 +49,15 @@ function App() {
                 <input
                   type="number"
                   className="w-full p-3 bg-white rounded-md outline-none"
-                  placeholder="10 digit mobile number"
+                  placeholder="Enter 10-digit mobile number"
                   id="number"
-                  {...register('number', { 'required': true, minLength: 10 })}
-                  onInput={(e) => {
-                    if (e.target.value.length > 10) {
-                      e.target.value = e.target.value.slice(0, 10);
-                    }
-                  }}
+                  {...register('number', {
+                    required: 'Phone number is required',
+                    minLength: { value: 10, message: 'Phone number must be exactly 10 digits' },
+                    maxLength: { value: 10, message: 'Phone number must be exactly 10 digits' }
+                  })}
                 />
-                {errors.number?.type === 'required' && (
-                  <p className='text-red-400'>Phone number is required</p>
-                )}
+                {errors.number && <p className="text-red-400">{errors.number.message}</p>}
               </div>
 
               <button className="w-full bg-[#022730] text-white font-bold p-3 rounded-md">
