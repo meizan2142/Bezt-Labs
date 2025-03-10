@@ -28,9 +28,7 @@ function App() {
 
           {/* Three Icons */}
           <div className="flex gap-6 mt-2">
-            <img src="/icons/icon1.png" alt="Icon 1" className="w-12 h-12" />
-            <img src="/icons/icon2.png" alt="Icon 2" className="w-12 h-12" />
-            <img src="/icons/icon3.png" alt="Icon 3" className="w-12 h-12" />
+            <img src="https://app.abouv.com/icons/onboarding/welcome.svg" alt="Icon 1" className="m-8 h-12" />
           </div>
         </div>
 
@@ -44,7 +42,13 @@ function App() {
               type="number"
               className="w-full p-3 bg-white rounded-md outline-none"
               placeholder="10 digit mobile number"
+              onInput={(e) => {
+                if (e.target.value.length > 10) {
+                  e.target.value = e.target.value.slice(0, 10);
+                }
+              }}
             />
+
             <button className="w-full bg-[#022730] text-white font-bold p-3 rounded-md">
               Continue
             </button>
